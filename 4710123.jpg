@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "7e9187b9-2143-4e9f-a436-3e144be3ccae",
+		"name": "Julo task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/init",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customer_xid",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/init",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/wallet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 377dbcac25fd2ce92105043c647cdb9add7fe5c5",
+						"description": "2c3a21a26688436ff8584c8dd49f0c30a820a064 81f1e86252e7111d7b53c81b91b9aac20307ed3a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/wallet",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/wallet/deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 81f1e86252e7111d7b53c81b91b9aac20307ed3a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "reference_id",
+							"value": "50535246-dcb2-4929-8cc9-004ea06f5241",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "10000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/wallet/deposit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"wallet",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/wallet/withdraw",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 377dbcac25fd2ce92105043c647cdb9add7fe5c5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "reference_id",
+							"value": "50535246-dcb2-4929-8cc9-004ea06f5248",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "5000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/wallet/withdraw",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"wallet",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
